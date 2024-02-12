@@ -4,9 +4,8 @@ import game from '../index.js';
 const evenDescription = 'Answer "yes" if the number is even, otherwise answer "no".';
 
 const evenQuestion = () => {
-  const number = getRandomIntNumber(0, 100);
-  const question = number;
-  const correctAnswer = isEven(number) ? 'yes' : 'no';
+  const question = getRandomIntNumber(0, 100);
+  const correctAnswer = isEven(question) ? 'yes' : 'no';
   return [question, correctAnswer];
 };
 

@@ -21,7 +21,7 @@ const generateProgression = (length, diff) => {
 const progressionQuestion = () => {
   const length = getRandomIntNumber(minProgressionLength, maxProgressionLength);
   const progressionDifference = getRandomIntNumber(1, 15);
-  const hiddenElementIndex = getRandomIntNumber(1, length - 2);
+  const hiddenElementIndex = getRandomIntNumber(0, length - 1);
 
   const progression = generateProgression(length, progressionDifference);
   const correctAnswer = String(progression[hiddenElementIndex]);
