@@ -25,7 +25,10 @@ const progressionQuestion = () => {
 
   const progression = generateProgression(length, progressionDifference);
   const correctAnswer = String(progression[hiddenElementIndex]);
-  const question = `${progression.slice(0, hiddenElementIndex).join(' ')} .. ${progression.slice(hiddenElementIndex + 1).join(' ')}`;
+
+  const beforeHidden = hiddenElementIndex !== 0 ? `${progression.slice(0, hiddenElementIndex).join(' ')} ` : '';
+  const afterHidden = progression.slice(hiddenElementIndex + 1).join(' ');
+  const question = `${beforeHidden}.. ${afterHidden}`;
 
   return [question, correctAnswer];
 };
