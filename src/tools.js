@@ -27,3 +27,9 @@ export const getGcd = (num1, num2) => {
 
   return Math.max(a, b);
 };
+
+export const generateQuestionPredicateRandNum = (randomFrom, randomTo, predicate) => {
+  const question = getRandomIntNumber(randomFrom, randomTo);
+  const correctAnswer = predicate(question) ? 'yes' : 'no';
+  return [question, correctAnswer];
+};
