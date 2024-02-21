@@ -1,5 +1,20 @@
-import { getGcd, getRandomIntNumber } from '../tools.js';
+import { getRandomIntNumber } from '../tools.js';
 import game from '../index.js';
+
+const getGcd = (num1, num2) => {
+  let a = num1;
+  let b = num2;
+
+  while (a > 0 && b > 0) {
+    if (a > b) {
+      a %= b;
+    } else {
+      b %= a;
+    }
+  }
+
+  return Math.max(a, b);
+};
 
 const gcdDescription = 'Find the greatest common divisor of given numbers.';
 
